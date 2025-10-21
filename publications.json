@@ -61,6 +61,38 @@
         "code": "https://github.com/USTCAGI/PruningRAG",
         "project": "https://ustc-rag-x.github.io/"
       }
+    },
+    {
+      "title": "Revisiting the Solution of Meta KDD Cup 2024: CRAG",
+      "authors": [
+        "Jie Ouyang",
+        "Yucong Luo",
+        "Mingyue Cheng",
+        "Daoyu Wang",
+        "Shuo Yu",
+        "Qi Liu",
+        "Enhong Chen"
+      ],
+      "venue": "Preprint (2024)",
+      "thumbnail": "images/publications/4.png",
+      "selected": 0,
+      "award": "",
+      "links": {
+        "pdf": "https://arxiv.org/abs/2409.15337",
+        "code": "https://github.com/USTCAGI/CRAG-in-KDD-Cup2024"
+      }
+    },
+    {
+      "title": "A Survey on Knowledge-Oriented Retrieval-Augmented Generation",
+      "authors": ["Mingyue Cheng", "Yucong Luo", "Jie Ouyang", "Qi Liu", "Huijie Liu", "Li Li", "Shuo Yu", "et al."
+      ],
+      "venue": "Preprint (2025)",
+      "thumbnail": "images/publications/5.png",
+      "selected": 0,
+      "award": "",
+      "links": {
+        "pdf": "https://arxiv.org/abs/2503.10677"
+      }
     }
   ]
 }
