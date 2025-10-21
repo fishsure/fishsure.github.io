@@ -1,5 +1,27 @@
 {
   "publications": [
+    
+    {
+      "title": "MemWeaver: A Hierarchical Memory from Textual Interactive Behaviors for Personalized Generation",
+      "authors": [
+        "Shuo Yu",
+        "Mingyue Cheng",
+        "Qi Liu",
+        "Daoyu Wang",
+        "Zirui Liu",
+        "Ze Guo",
+        "Xiaoyu Tao"
+      ],
+      "venue": "Preprint (2025)",
+      "thumbnail": "images/publications/1.png",
+      "selected": 1,
+      "award": "",
+      "links": {
+        "pdf": "https://arxiv.org/abs/2510.07713",
+        "code": "https://github.com/fishsure/MemWeaver"
+      }
+    }
+    ,
     {
       "title": "PaperArena: An Evaluation Benchmark for Tool-Augmented Agentic Reasoning on Scientific Literature",
       "authors": [
@@ -10,7 +32,7 @@
         "Zirui Liu",
         "Ze Guo"
       ],
-      "venue": "Preprint (2024)",
+      "venue": "Preprint (2025)",
       "thumbnail": "images/publications/3.png",
       "selected": 1,
       "award": "",
@@ -38,23 +60,6 @@
         "pdf": "https://arxiv.org/abs/2409.13694",
         "code": "https://github.com/USTCAGI/PruningRAG",
         "project": "https://ustc-rag-x.github.io/"
-      }
-    },
-    {
-      "title": "TimeDART: A Diffusion Autoregressive Transformer for Self-Supervised Time Series Representation",
-      "authors": [
-        "Daoyu Wang",
-        "Mingyue Cheng",
-        "Zhiding Liu",
-        "Qi Liu"
-      ],
-      "venue": "International Conference on Machine Learning (ICML 2025)",
-      "thumbnail": "images/publications/1.png",
-      "selected": 1,
-      "award": "ICML 2025",
-      "links": {
-        "pdf": "https://arxiv.org/abs/2410.05711",
-        "code": "https://github.com/Melmaphother/TimeDART"
       }
     }
   ]

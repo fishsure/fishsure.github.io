@@ -114,7 +114,7 @@ function createPublicationElement(publication) {
   // Format authors with highlighting
   let authorsHTML = '';
   publication.authors.forEach((author, index) => {
-    if (author.includes('Daoyu Wang')) {
+    if (author.includes('Shuo Yu')) {
       authorsHTML += `<span class="highlight-name">${author}</span>`;
     } else {
       authorsHTML += author;
@@ -295,7 +295,7 @@ function createProjectElement(project) {
   // Format authors with highlighting
   let authorsHTML = '';
   project.authors.forEach((author, index) => {
-    if (author.includes('Daoyu Wang')) {
+    if (author.includes('Shuo Yu')) {
       authorsHTML += `<span class="highlight-name">${author}</span>`;
     } else {
       authorsHTML += author;

@@ -1,24 +1,27 @@
 {
   "projects": [
     {
-      "title": "Science-Star: Platform for Building, Extending, and Experimenting with Scientific Agents",
+      "title": "Meta KDD Cup 2024 CRAG · Comprehensive RAG Benchmark",
       "authors": [
-        "Daoyu Wang",
-        "Qingchuan Li",
-        "Tian Gao",
-        "Shuo Yu",
-        "Xiaoyu Tao",
+        "Jie Ouyang",
+        "Yucong Luo",
         "Mingyue Cheng",
-        "Qi Liu"
+        "Daoyu Wang",
+        "Shuo Yu",
+        "Qi Liu",
+        "Enhong Chen"
       ],
-      "venue": "Maintainer (Aug. 2025)",
-      "thumbnail": "images/projects/4.png",
+      "venue": "Committer (Jun. 2024)",
+      "thumbnail": "images/projects/1.png",
       "selected": 1,
-      "award": "Stars 700+",
+      "award": "Silver Medal",
       "links": {
-        "code": "https://github.com/Melmaphother/Science-Star"
+        "pdf": "https://arxiv.org/abs/2409.15337",
+        "code": "https://github.com/USTCAGI/CRAG-in-KDD-Cup2024"
       }
-    },
+    }
+    ,
+    
     {
       "title": "Agent-R1: Training Powerful LLM Agents with End-to-End Reinforcement Learning",
       "authors": [
@@ -39,40 +42,24 @@
         "code": "https://github.com/0russwest0/Agent-R1"
       }
     },
+    
     {
-      "title": "TimeDART: Codebase for Time Series Self-Supervised Learning and Supervised Finetuning",
+      "title": "Science-Star: Platform for Building, Extending, and Experimenting with Scientific Agents",
       "authors": [
         "Daoyu Wang",
+        "Qingchuan Li",
+        "Tian Gao",
+        "Shuo Yu",
+        "Xiaoyu Tao",
         "Mingyue Cheng",
-        "Zhiding Liu",
         "Qi Liu"
       ],
-      "venue": "Maintainer (Apr. 2025)",
-      "thumbnail": "images/projects/2.png",
+      "venue": "Committer (Aug. 2025)",
+      "thumbnail": "images/projects/4.png",
       "selected": 1,
-      "award": "Stars 100+",
+      "award": "Stars 700+",
       "links": {
-        "code": "https://github.com/Melmaphother/TimeDART"
-      }
-    },
-    {
-      "title": "Meta KDD Cup 2024 CRAG · Comprehensive RAG Benchmark",
-      "authors": [
-        "Jie Ouyang",
-        "Yucong Luo",
-        "Mingyue Cheng",
-        "Daoyu Wang",
-        "Shuo Yu",
-        "Qi Liu",
-        "Enhong Chen"
-      ],
-      "venue": "Committer (Jun. 2024)",
-      "thumbnail": "images/projects/1.png",
-      "selected": 1,
-      "award": "Silver Medal",
-      "links": {
-        "pdf": "https://arxiv.org/abs/2409.15337",
-        "code": "https://github.com/USTCAGI/CRAG-in-KDD-Cup2024"
+        "code": "https://github.com/Melmaphother/Science-Star"
       }
     }
   ]
