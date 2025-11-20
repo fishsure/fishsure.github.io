@@ -25,20 +25,22 @@
     {
       "title": "Agent-R1: Training Powerful LLM Agents with End-to-End Reinforcement Learning",
       "authors": [
+        "Mingyue Cheng",
         "Jie Ouyang",
+        "Shuo Yu",
         "Ruiran Yan",
         "Yucong Luo",
-        "Mingyue Cheng",
+        "Zirui Liu",        
+        "Daoyu Wang",
         "Qi Liu",
-        "Zirui Liu",
-        "Shuo Yu",
-        "Daoyu Wang"
+        "Enhong Chen"
       ],
       "venue": "Committer (May 2025)",
       "thumbnail": "images/projects/3.png",
       "selected": 1,
-      "award": "Stars 800+",
+      "award": "Stars 900+",
       "links": {
+        "pdf": "https://arxiv.org/abs/2511.14460",
         "code": "https://github.com/0russwest0/Agent-R1"
       }
     },
