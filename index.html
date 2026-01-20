@@ -27,11 +27,15 @@
     <header>
         <div class="header-content">
             <h1>Shuo Yu (于硕)</h1>
-            <p>AI & Data Science Master Student • University of Science and Technology of China</p>
+            <p data-i18n="subtitle">AI & Data Science Master Student • University of Science and Technology of China</p>
             <div class="social-links-header">
                 <a href="https://scholar.google.com/citations?hl=zh-CN&user=S-cZqlAAAAAJ"><i class="fas fa-graduation-cap"></i>Google Scholar</a>
                 <a href="https://github.com/fishsure"><i class="fab fa-github"></i>GitHub</a>
-                <a href="mailto:yu12345@mail.ustc.edu.cn"><i class="fas fa-envelope"></i>Email</a>
+                <a href="mailto:yu12345@mail.ustc.edu.cn"><i class="fas fa-envelope"></i>yu12345@mail.ustc.edu.cn</a>
+                <button id="lang-switch" class="lang-switch-btn" aria-label="Switch language">
+                    <i class="fas fa-language"></i>
+                    <span id="lang-text">中文</span>
+                </button>
             </div>
         </div>
         <div class="header-image">
@@ -41,24 +45,25 @@
 
     <main>
         <section id="about">
-            <p>Hi! This is Shuo Yu, a Master student in Artificial Intelligence and Data Science at University of Science and Technology of China (USTC). I am advised by Prof. <a href="http://staff.ustc.edu.cn/~qiliuql/">Qi Liu</a> and currently working with Associate Researcher <a href="https://mingyue-cheng.github.io/">Mingyue Cheng</a>.</p>
+            <p data-i18n="about">Hi! This is Shuo Yu, a Master student in Artificial Intelligence and Data Science at University of Science and Technology of China (USTC). I am from the State Key Laboratory of Cognitive Intelligence. I am advised by Prof. <a href="http://staff.ustc.edu.cn/~qiliuql/">Qi Liu</a> and currently working with Associate Researcher <a href="https://mingyue-cheng.github.io/">Mingyue Cheng</a>.</p>
         </section>
 
         <section id="research-interest">
-            <h2>Research Interest</h2>
-            <p>My research focuses on <strong>large language models and their applications</strong>, with particular emphasis on:</p>
+            <h2 data-i18n="research-interest-title">Research Interest</h2>
+            <p data-i18n="research-interest-intro">My research focuses on <strong>large language models and their applications</strong>, with particular emphasis on:</p>
             <ul>
-                <li><strong>LLM Memory</strong> - Developing memory mechanisms for large language models</li>
-                <li><strong>Personalized LLM</strong> - Creating personalized and adaptive language models</li>
-                <li><strong>Retrieval-Augmented Generation (RAG)</strong> - Enhancing LLMs with external knowledge retrieval</li>
+                <li><strong data-i18n="research-llm-memory-title">LLM Memory</strong> - <span data-i18n="research-llm-memory-desc">Developing memory mechanisms for large language models</span></li>
+                <li><strong data-i18n="research-agent-title">Agent</strong> - <span data-i18n="research-agent-desc">Developing AI agents including reinforcement learning-based training and workflow construction.</span></li>
+                <li><strong data-i18n="research-rag-title">Retrieval-Augmented Generation (RAG)</strong> - <span data-i18n="research-rag-desc">Enhancing LLMs with external knowledge retrieval</span></li>
             </ul>
         </section>
 
         <section id="publications">
             <div class="publications-header">
-                <h2 id="toggle-header">Selected Publications</h2>
-                <button id="toggle-publications" class="toggle-publications">Show All</button>
+                <h2 id="toggle-header" data-i18n="publications-selected">Selected Publications</h2>
+                <button id="toggle-publications" class="toggle-publications" data-i18n="show-all">Show All</button>
             </div>
+            <p id="publications-summary" class="section-summary" data-i18n="publications-summary" style="margin-bottom: 1.5rem; color: var(--text-secondary);"></p>
             <div id="publications-container">
                 <!-- Publications will be dynamically loaded here -->
             </div>
@@ -66,65 +71,66 @@
 
         <section id="projects">
             <div class="publications-header">
-                <h2 id="projects-toggle-header">Selected Projects and Competitions</h2>
-                <button id="toggle-projects" class="toggle-publications">Show All</button>
+                <h2 id="projects-toggle-header" data-i18n="projects-selected">Selected Projects and Competitions</h2>
+                <button id="toggle-projects" class="toggle-publications" data-i18n="show-all">Show All</button>
             </div>
+            <p id="projects-summary" class="section-summary" data-i18n="projects-summary" style="margin-bottom: 1.5rem; color: var(--text-secondary);"></p>
             <div id="projects-container">
                 <!-- Projects will be dynamically loaded here -->
             </div>
         </section>
 
         <section id="awards">
-            <h2>Awards</h2>
+            <h2 data-i18n="awards-title">Awards</h2>
             <div class="award-item" style="background-color: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin: 10px 0;">
                 <span class="award-year">2024</span>
-                <div class="award-desc"><strong>National Scholarship</strong></div>
+                <div class="award-desc"><strong data-i18n="award-national-scholarship">National Scholarship</strong></div>
             </div>
             <div class="award-item">
                 <span class="award-year">2025</span>
-                <div class="award-desc">Outstanding Graduate of Anhui Province</div>
+                <div class="award-desc" data-i18n="award-outstanding-graduate-anhui">Outstanding Graduate of Anhui Province</div>
             </div>
             <div class="award-item">
                 <span class="award-year">2025</span>
-                <div class="award-desc">Outstanding Graduate, USTC</div>
+                <div class="award-desc" data-i18n="award-outstanding-graduate-ustc">Outstanding Graduate, USTC</div>
             </div>
             <div class="award-item">
                 <span class="award-year">2024</span>
-                <div class="award-desc">Meta KDD Cup 2024 CRAG Benchmark Silver Medal (Task 2 & 3)</div>
+                <div class="award-desc" data-i18n="award-kdd-cup">Meta KDD Cup 2024 CRAG Benchmark Silver Medal (Task 2 & 3)</div>
             </div>
         </section>
 
         <section id="experiences">
-            <h2>Experiences</h2>
+            <h2 data-i18n="experiences-title">Experiences</h2>
             <div class="award-item">
                 <span class="award-year">Sep. 2025 ~ Present</span>
                 <div class="award-desc">
-                    <strong>Master in Artificial Intelligence and Data Science</strong><br>
-                    <a href="https://www.ustc.edu.cn/">University of Science and Technology of China</a>, School of Artificial Intelligence and Data Science<br>
-                    <small>Advisor: <a href="http://staff.ustc.edu.cn/~qiliuql/">Prof. Qi Liu</a> | Currently working with: <a href="https://mingyue-cheng.github.io/">Associate Researcher Mingyue Cheng</a></small>
+                    <strong data-i18n="exp-master-title">Master in Artificial Intelligence and Data Science</strong><br>
+                    <a href="https://www.ustc.edu.cn/" data-i18n="ustc-name">University of Science and Technology of China</a>, <span data-i18n="exp-master-school">School of Artificial Intelligence and Data Science</span><br>
+                    <small><span data-i18n="exp-advisor">Advisor:</span> <span data-i18n="exp-advisors-list">Prof. Qi Liu and Associate Researcher Mingyue Cheng</span></small>
                 </div>
             </div>
             <div class="award-item">
                 <span class="award-year">Nov. 2024 ~ Mar. 2025</span>
                 <div class="award-desc">
-                    <strong>Algorithm Engineer Intern</strong><br>
-                    <a href="https://www.meituan.com/">Meituan</a>, AIGC Team, Fulfillment Platform, Local Commerce<br>
-                    <small>Optimized the RAG system on the Rider Assistant APP</small>
+                    <strong data-i18n="exp-intern-title">Algorithm Engineer Intern</strong><br>
+                    <a href="https://www.meituan.com/" data-i18n="meituan-name">Meituan</a>, <span data-i18n="exp-intern-team">AIGC Team, Fulfillment Platform, Local Commerce</span><br>
+                    <small data-i18n="exp-intern-desc">Optimized the RAG system on the Rider Assistant APP</small>
                 </div>
             </div>
             <div class="award-item">
                 <span class="award-year">Sep. 2021 ~ Jun. 2025</span>
                 <div class="award-desc">
-                    <strong>Bachelor in Computer Science</strong><br>
-                    <a href="https://www.ustc.edu.cn/">University of Science and Technology of China</a>, <a href="https://cs.ustc.edu.cn/main.htm">School of Computer Science and Technology</a>
+                    <strong data-i18n="exp-bachelor-title">Bachelor in Computer Science</strong><br>
+                    <a href="https://www.ustc.edu.cn/" data-i18n="ustc-name">University of Science and Technology of China</a>, <a href="https://cs.ustc.edu.cn/main.htm" data-i18n="exp-bachelor-school">School of Computer Science and Technology</a>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>Last updated: October 2025. Design and source code from <a href="https://github.com/yuhui-zh15/Minimal-Academic-Website">Minimal-Academic-Website</a>.</p>
-        <p><strong>Acknowledgments:</strong> Special thanks to my classmate <a href="https://github.com/Melmaphother">Daoyu Wang</a> for his valuable assistance and support.</p>
+        <p data-i18n="footer-updated">Last updated: October 2025. Design and source code from <a href="https://github.com/yuhui-zh15/Minimal-Academic-Website">Minimal-Academic-Website</a>.</p>
+        <p><strong data-i18n="footer-acknowledgments">Acknowledgments:</strong> <span data-i18n="footer-acknowledgments-text">Special thanks to my classmate <a href="https://melmaphother.github.io/">Daoyu Wang</a> for his valuable assistance and support.</span></p>
     </footer>
 
     <div id="imageModal" class="modal">

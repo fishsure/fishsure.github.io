@@ -21,6 +21,12 @@ body {
   font-weight: 300;
 }
 
+/* Chinese font stack */
+html[lang="zh"] body,
+html[lang="zh"] {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
 header {
   margin-bottom: 1.5rem;
   border-bottom: 1px solid var(--border-color);
@@ -100,6 +106,40 @@ nav a:hover, .social-links-header a:hover {
 
 .social-links-header a i {
   margin-right: 0.4rem;
+}
+
+.lang-switch-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 0.9rem;
+  transition: all var(--transition-time) ease;
+  font-family: 'Merriweather', Georgia, 'Times New Roman', serif;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.lang-switch-btn i {
+  margin-right: 0;
+  font-size: 0.85rem;
+}
+
+.lang-switch-btn:hover {
+  color: var(--accent-color);
+  background-color: rgba(204, 120, 92, 0.08);
+  transform: translateX(var(--animation-offset));
+}
+
+.scholar-citations {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
 }
 
 /* Unified animation for elements (not sections) */
@@ -196,6 +236,16 @@ section {
   font-size: 1.05rem;
 }
 
+.pub-title a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color var(--transition-time) ease;
+}
+
+.pub-title a:hover {
+  color: var(--accent-color);
+}
+
 .pub-authors {
   font-size: 0.9rem;
   margin-bottom: 0.4rem;
@@ -204,8 +254,13 @@ section {
 }
 
 .highlight-name {
-  font-weight: 600;
+  font-weight: 700;
   color: var(--accent-color);
+}
+
+.highlight-advisor {
+  font-weight: 700;
+  color: var(--text-color);
 }
 
 .pub-venue-container {
@@ -459,7 +514,8 @@ strong {
   /* Disable right-moving hover animations on mobile */
   .publication-item:hover, .award-item:hover, 
   .service-category:hover, .misc-item:hover, .news-list li:hover,
-  nav a:hover, .social-links-header a:hover, .pub-links a:hover {
+  nav a:hover, .social-links-header a:hover, .pub-links a:hover,
+  .lang-switch-btn:hover {
     transform: none !important;
   }
 }

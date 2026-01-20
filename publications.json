@@ -1,6 +1,47 @@
 {
   "publications": [
-    
+    {
+      "title": "PaperScout: An Autonomous Agent for Academic Paper Search with Process-Aware Sequence-Level Policy Optimization",
+      "authors": [
+        "Tingyue Pan",
+        "Jie Ouyang",
+        "Mingyue Cheng",
+        "Qingchuan Li",
+        "Zirui Liu",
+        "Mingfan Pan",
+        "Shuo Yu",
+        "Qi Liu"
+      ],
+      "venue": "Preprint (2026)",
+      "thumbnail": "images/publications/7.png",
+      "selected": 0,
+      "award": "",
+      "links": {
+        "pdf": "https://arxiv.org/abs/2601.10029"
+      }
+    },
+    {
+      "title": "Mind2Report: A Cognitive Deep Research Agent for Expert-Level Commercial Report Synthesis",
+      "authors": [
+        "Mingyue Cheng",
+        "Daoyu Wang",
+        "Qi Liu",
+        "Shuo Yu",
+        "Xiaoyu Tao",
+        "Yuqian Wang",
+        "Chengzhong Chu",
+        "Yu Duan",
+        "Mingkang Long",
+        "Enhong Chen"
+      ],
+      "venue": "Preprint (2026)",
+      "thumbnail": "images/publications/6.png",
+      "selected": 1,
+      "award": "",
+      "links": {
+        "pdf": "https://arxiv.org/abs/2601.04879"
+      }
+    },
     {
       "title": "MemWeaver: A Hierarchical Memory from Textual Interactive Behaviors for Personalized Generation",
       "authors": [
@@ -12,10 +53,10 @@
         "Ze Guo",
         "Xiaoyu Tao"
       ],
-      "venue": "Preprint (2025)",
+      "venue": "The Web Conference (WWW 2026)",
       "thumbnail": "images/publications/1.png",
       "selected": 1,
-      "award": "",
+      "award": "Accepted",
       "links": {
         "pdf": "https://arxiv.org/abs/2510.07713",
         "code": "https://github.com/fishsure/MemWeaver"
@@ -55,7 +96,7 @@
       "venue": "ACM International Conference on Information and Knowledge Management (CIKM 2025)",
       "thumbnail": "images/publications/2.png",
       "selected": 1,
-      "award": "",
+      "award": "Accepted",
       "links": {
         "pdf": "https://arxiv.org/abs/2409.13694",
         "code": "https://github.com/USTCAGI/PruningRAG",
