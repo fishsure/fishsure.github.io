@@ -551,6 +551,42 @@ function renderProjects(selectedOnly) {
   });
 }
 
+// Format star count: 1342 -> "1.3k", 700 -> "700"
+function formatStars(count) {
+  if (count >= 1000) {
+    return (count / 1000).toFixed(1).replace(/\.0$/, '') + 'k';
+  }
+  return count.toString();
+}
+
+// Fetch GitHub star count, with 1-hour localStorage cache
+async function fetchGitHubStars(codeUrl) {
+  if (!codeUrl || !codeUrl.includes('github.com')) return null;
+
+  const match = codeUrl.match(/github\.com\/([^\/]+\/[^\/\s]+)/);
+  if (!match) return null;
+
+  const repo = match[1].replace(/\/$/, '');
+  const cacheKey = `github_stars_${repo}`;
+
+  const cached = localStorage.getItem(cacheKey);
+  if (cached) {
+    const { stars, timestamp } = JSON.parse(cached);
+    if (Date.now() - timestamp < 60 * 60 * 1000) return stars;
+  }
+
+  try {
+    const response = await fetch(`https://api.github.com/repos/${repo}`);
+    if (!response.ok) return null;
+    const data = await response.json();
+    const stars = data.stargazers_count;
+    localStorage.setItem(cacheKey, JSON.stringify({ stars, timestamp: Date.now() }));
+    return stars;
+  } catch {
+    return null;
+  }
+}
+
 // Create HTML element for a project (similar to publication)
 function createProjectElement(project) {
   const projectItem = document.createElement('div');
@@ -625,6 +661,22 @@ function createProjectElement(project) {
     award.className = 'pub-award';
     award.textContent = project.award;
     venueContainer.appendChild(award);
+  }
+
+  // Add live GitHub stars badge if code link is a GitHub URL
+  if (project.links && project.links.code && project.links.code.includes('github.com')) {
+    const starsBadge = document.createElement('div');
+    starsBadge.className = 'pub-award';
+    starsBadge.textContent = '★ ...';
+    venueContainer.appendChild(starsBadge);
+
+    fetchGitHubStars(project.links.code).then(stars => {
+      if (stars !== null) {
+        starsBadge.textContent = `★ ${formatStars(stars)}`;
+      } else {
+        starsBadge.remove();
+      }
+    });
   }
   
   content.appendChild(venueContainer);
