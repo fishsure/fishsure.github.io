@@ -17,7 +17,8 @@
       "selected": 1,
       "award": "",
       "links": {
-        "pdf": "https://arxiv.org/abs/2603.07528"
+        "pdf": "https://arxiv.org/abs/2603.07528",
+        "code": "https://github.com/fishsure/TableMind-PP"
       }
     },
     {
@@ -59,7 +60,8 @@
       "selected": 1,
       "award": "",
       "links": {
-        "pdf": "https://arxiv.org/abs/2601.04879"
+        "pdf": "https://arxiv.org/abs/2601.04879",
+        "code": "https://github.com/Melmaphother/Mind2Report"
       }
     },
     {
