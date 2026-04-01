@@ -60,6 +60,27 @@
         "code": "https://github.com/AgentR1/Claw-R1"
       }
     },
+    {
+      "title": "TabClaw: Interactive AI Agent for Table Analysis",
+      "authors": [
+        "Shuo Yu",
+        "Daoyu Wang",
+        "Qingchuan Li",
+        "Xiaoyu Tao",
+        "Qingyang Mao",
+        "Yitong Zhou",
+        "Mingyue Cheng",
+        "Qi Liu",
+        "Enhong Chen"
+      ],
+      "venue": "Committer (Mar. 2026)",
+      "thumbnail": "images/projects/6.png",
+      "selected": 1,
+      "links": {
+        "project": "https://agentr1.github.io/tab-claw/",
+        "code": "https://github.com/fishsure/TabClaw"
+      }
+    },
 
     {
       "title": "Science-Star: Platform for Building, Extending, and Experimenting with Scientific Agents",

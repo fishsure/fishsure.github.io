@@ -14,6 +14,7 @@ const authorNames = {
   'Tingyue Pan': '潘廷岳',
   'Jie Ouyang': '欧阳杰',
   'Qingchuan Li': '李晴川',
+  'Qingyang Mao': '毛清扬',
   'Zirui Liu': '刘子瑞',
   'Mingfan Pan': '潘铭凡',
   'Xiaoyu Tao': '陶小玉',
@@ -28,7 +29,8 @@ const authorNames = {
   'Ruiran Yan': '晏瑞然',
   'Tian Gao': '高天',
   'Ze Guo': '郭泽',
-  'Chengzhong Chu': '储诚中'
+  'Chengzhong Chu': '储诚中',
+  'Yitong Zhou': '周奕同'
 };
 
 // Get author name based on current language
@@ -60,7 +62,7 @@ const translations = {
     'publications-selected': 'Selected Publications',
     'publications-summary': 'My research focuses on LLM Memory, AI Agents, and RAG systems. I have published papers on hierarchical memory mechanisms for personalized generation (WWW 2026), uncertainty-aware programmatic agents for table reasoning (TableMind++), deep research agents for commercial report synthesis, and knowledge pruning for retrieval-augmented generation (CIKM 2025).',
     'projects-selected': 'Selected Projects and Competitions',
-    'projects-summary': 'I have contributed to several impactful open-source projects and competitions, including winning a Silver Medal in Meta KDD Cup 2024 CRAG Benchmark, developing Agent-R1 for training LLM agents with reinforcement learning, building Science-Star for scientific agent platforms, and developing Claw-R1 for agentic RL training of general agents.',
+    'projects-summary': 'I have contributed to several impactful open-source projects and competitions, including winning a Silver Medal in Meta KDD Cup 2024 CRAG Benchmark, developing Agent-R1 for training LLM agents with reinforcement learning, building Science-Star for scientific agent platforms, developing Claw-R1 for agentic RL training of general agents, and TabClaw for interactive table analysis agents.',
     'show-all': 'Show All',
     'show-selected': 'Show Selected',
     'all-publications': 'All Publications',
@@ -100,7 +102,7 @@ const translations = {
     'publications-selected': '代表性论文',
     'publications-summary': '我的研究聚焦于大语言模型记忆、AI智能体和RAG系统。我在个性化生成的层次化记忆机制（WWW 2026）、面向表格推理的不确定性感知程序化智能体（TableMind++）、商业报告合成的深度研究智能体、以及检索增强生成的知识剪枝（CIKM 2025）等方面发表了论文。',
     'projects-selected': '代表性项目与竞赛',
-    'projects-summary': '我参与并贡献了多个有影响力的开源项目和竞赛，包括获得Meta KDD Cup 2024 CRAG比赛银牌，开发了用于强化学习训练LLM智能体的Agent-R1，构建了科学智能体平台Science-Star，以及开发了面向通用智能体的Agentic RL训练框架Claw-R1。',
+    'projects-summary': '我参与并贡献了多个有影响力的开源项目和竞赛，包括获得Meta KDD Cup 2024 CRAG比赛银牌，开发了用于强化学习训练LLM智能体的Agent-R1，构建了科学智能体平台Science-Star，开发了面向通用智能体的Agentic RL训练框架Claw-R1，以及面向表格分析的交互式智能体TabClaw。',
     'show-all': '显示全部',
     'show-selected': '显示代表性',
     'all-publications': '全部论文',
@@ -698,6 +700,13 @@ function createProjectElement(project) {
       codeLink.href = project.links.code;
       codeLink.textContent = '[Code]';
       links.appendChild(codeLink);
+    }
+    
+    if (project.links.project) {
+      const projectLink = document.createElement('a');
+      projectLink.href = project.links.project;
+      projectLink.textContent = '[Project Page]';
+      links.appendChild(projectLink);
     }
     
     content.appendChild(links);
