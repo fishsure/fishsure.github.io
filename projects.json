@@ -81,6 +81,27 @@
         "code": "https://github.com/fishsure/TabClaw"
       }
     },
+    {
+      "title": "PaperScout (学术乐问): Agentic Academic Paper Search",
+      "authors": [
+        "Tingyue Pan",
+        "Jie Ouyang",
+        "Mingyue Cheng",
+        "Qingchuan Li",
+        "Zirui Liu",
+        "Mingfan Pan",
+        "Shuo Yu",
+        "Qi Liu"
+      ],
+      "venue": "Committer (2026)",
+      "thumbnail": "images/publications/7.png",
+      "selected": 1,
+      "hideGitHubStars": true,
+      "links": {
+        "pdf": "https://arxiv.org/abs/2601.10029",
+        "code": "https://github.com/pty12345/PaperScout"
+      }
+    },
 
     {
       "title": "Science-Star: Platform for Building, Extending, and Experimenting with Scientific Agents",

@@ -56,13 +56,13 @@ const translations = {
     'research-llm-memory-title': 'LLM Memory',
     'research-llm-memory-desc': 'Developing memory mechanisms for large language models',
     'research-agent-title': 'Agent',
-    'research-agent-desc': 'Developing AI agents including reinforcement learning-based training and workflow construction.',
+    'research-agent-desc': 'Developing AI agents including reinforcement learning-based training (e.g., PSPO for multi-turn retrieval agents) and workflow construction.',
     'research-rag-title': 'Retrieval-Augmented Generation (RAG)',
     'research-rag-desc': 'Enhancing LLMs with external knowledge retrieval',
     'publications-selected': 'Selected Publications',
-    'publications-summary': 'My research focuses on LLM Memory, AI Agents, and RAG systems. I have published papers on hierarchical memory mechanisms for personalized generation (WWW 2026), uncertainty-aware programmatic agents for table reasoning (TableMind++), deep research agents for commercial report synthesis, and knowledge pruning for retrieval-augmented generation (CIKM 2025).',
+    'publications-summary': 'My research focuses on LLM Memory, AI Agents, and RAG systems. I have published papers on hierarchical memory mechanisms for personalized generation (WWW 2026), uncertainty-aware programmatic agents for table reasoning (TableMind++), deep research agents for commercial report synthesis, knowledge pruning for retrieval-augmented generation (CIKM 2025), and agentic academic paper search — where we introduced PSPO (Proximal Sequence Policy Optimization), a sequence-level reinforcement learning algorithm for multi-turn agents.',
     'projects-selected': 'Selected Projects and Competitions',
-    'projects-summary': 'I have contributed to several impactful open-source projects and competitions, including winning a Silver Medal in Meta KDD Cup 2024 CRAG Benchmark, developing Agent-R1 for training LLM agents with reinforcement learning, building Science-Star for scientific agent platforms, developing Claw-R1 for agentic RL training of general agents, and TabClaw for interactive table analysis agents.',
+    'projects-summary': 'I have contributed to several impactful open-source projects and competitions, including winning a Silver Medal in Meta KDD Cup 2024 CRAG Benchmark, developing Agent-R1 for training LLM agents with reinforcement learning, building Science-Star for scientific agent platforms, developing Claw-R1 for agentic RL training of general agents, TabClaw for interactive table analysis, and PaperScout (学术乐问) — an open-source agentic paper search system powered by our PSPO-trained model.',
     'show-all': 'Show All',
     'show-selected': 'Show Selected',
     'all-publications': 'All Publications',
@@ -96,13 +96,13 @@ const translations = {
     'research-llm-memory-title': '大语言模型记忆',
     'research-llm-memory-desc': '开发大语言模型的记忆机制',
     'research-agent-title': '智能体',
-    'research-agent-desc': '开发包括基于强化学习训练和工作流构建的AI智能体。',
+    'research-agent-desc': '开发包括基于强化学习训练（如面向多轮检索智能体的 PSPO）和工作流构建的 AI 智能体。',
     'research-rag-title': '检索增强生成（RAG）',
     'research-rag-desc': '通过外部知识检索增强大语言模型',
     'publications-selected': '代表性论文',
-    'publications-summary': '我的研究聚焦于大语言模型记忆、AI智能体和RAG系统。我在个性化生成的层次化记忆机制（WWW 2026）、面向表格推理的不确定性感知程序化智能体（TableMind++）、商业报告合成的深度研究智能体、以及检索增强生成的知识剪枝（CIKM 2025）等方面发表了论文。',
+    'publications-summary': '我的研究聚焦于大语言模型记忆、AI智能体和RAG系统。我在个性化生成的层次化记忆机制（WWW 2026）、面向表格推理的不确定性感知程序化智能体（TableMind++）、商业报告合成的深度研究智能体、检索增强生成的知识剪枝（CIKM 2025）、以及智能体化学术文献检索等方面发表了论文；其中提出 PSPO（Proximal Sequence Policy Optimization，面向多轮交互的序列级强化学习算法）。',
     'projects-selected': '代表性项目与竞赛',
-    'projects-summary': '我参与并贡献了多个有影响力的开源项目和竞赛，包括获得Meta KDD Cup 2024 CRAG比赛银牌，开发了用于强化学习训练LLM智能体的Agent-R1，构建了科学智能体平台Science-Star，开发了面向通用智能体的Agentic RL训练框架Claw-R1，以及面向表格分析的交互式智能体TabClaw。',
+    'projects-summary': '我参与并贡献了多个有影响力的开源项目和竞赛，包括获得Meta KDD Cup 2024 CRAG比赛银牌，开发了用于强化学习训练LLM智能体的Agent-R1，构建了科学智能体平台Science-Star，开发了面向通用智能体的Agentic RL训练框架Claw-R1，面向表格分析的交互式智能体TabClaw，以及开源的 Agentic 论文检索应用「学术乐问」（PaperScout，采用 PSPO 训练的模型）。',
     'show-all': '显示全部',
     'show-selected': '显示代表性',
     'all-publications': '全部论文',
@@ -665,8 +665,13 @@ function createProjectElement(project) {
     venueContainer.appendChild(award);
   }
 
-  // Add live GitHub stars badge if code link is a GitHub URL
-  if (project.links && project.links.code && project.links.code.includes('github.com')) {
+  // Add live GitHub stars badge if code link is a GitHub URL (opt out via hideGitHubStars)
+  if (
+    !project.hideGitHubStars &&
+    project.links &&
+    project.links.code &&
+    project.links.code.includes('github.com')
+  ) {
     const starsBadge = document.createElement('div');
     starsBadge.className = 'pub-award';
     starsBadge.textContent = '★ ...';
